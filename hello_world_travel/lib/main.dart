@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
       body: Builder(
         builder: (context) => SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Center(
               child: Column(
                 children: [
@@ -62,9 +62,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                      padding: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(5),
                       child: Container(
-                        decoration: BoxDecoration(boxShadow: [
+                        decoration: const BoxDecoration(boxShadow: [
                           BoxShadow(
                               color: Colors.blue,
                               blurRadius: 10,
@@ -75,10 +75,10 @@ class _HomePageState extends State<HomePage> {
                             height: 350),
                       )),
                   Padding(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     child: ElevatedButton(
                         onPressed: () => onContactButtonClicked(context),
-                        child: Text("Contact us")),
+                        child: const Text("Contact us")),
                   ),
                 ],
               ),
@@ -94,12 +94,12 @@ void onContactButtonClicked(BuildContext context) {
   showDialog(
       context: context,
       builder: (context) => AlertDialog(
-            title: Text("Contact Us"),
-            content: Text(" Content Dialog"),
+            title: const Text("Contact Us"),
+            content: const Text(" Content Dialog"),
             actions: [
               TextButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  child: Text("Close"))
+                  child: const Text("Close"))
             ],
           ));
 }
